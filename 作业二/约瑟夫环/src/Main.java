@@ -1,5 +1,3 @@
-import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
-
 public class Main {
     public static void clockwise(DlinkedList list, int n){
         while (!list.isempty()){
