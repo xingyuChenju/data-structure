@@ -1,5 +1,3 @@
-import sun.security.util.Length;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,7 +17,6 @@ public class Main {
                 stack.push(w + Math.max(2 * v, 1));
             }
         }
-
         return stack.pop();
     }
     public static void main(String args[]){

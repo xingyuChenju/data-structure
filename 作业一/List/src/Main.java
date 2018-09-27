@@ -16,8 +16,10 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String line1;
             String line2;
+
             while (scanner.hasNext()) {
                 // 一次读入一行数据
+
                 line1 = scanner.nextLine();
                 line2 = scanner.nextLine();
                 String[] c = line1.split(" ");
@@ -91,3 +93,4 @@ class  Node{
         return this.next;
     }
 }
+
