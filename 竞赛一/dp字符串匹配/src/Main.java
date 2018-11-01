@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    int a[][]
+
     public static void main(String[] args){
         Scanner a = new Scanner(System.in);
         while (a.hasNext()){
