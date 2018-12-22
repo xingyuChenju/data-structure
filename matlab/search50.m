@@ -3,7 +3,7 @@ clear all;
 close all;
 % data 操作随机学号
 % data _rec记录原始结果最后跟新次数
-data = load('Num07.txt')
+data = load('Num10.txt')
 data_rec = data;
 num_col = 1; %表示学号对应的列 
 time_col = 2; %表示次数对应的列
@@ -11,6 +11,7 @@ time_col = 2; %表示次数对应的列
 time_set =  unique(data(:,time_col));
 index = data(:,time_col) == min(time_set);
 nums = data(index,num_col);
+nums = nums(randperm(length(nums)))
 data(index,:) =[]; 
 % 如果人数不够从次数不是最多的人里面选
 if length(nums)<50
@@ -29,14 +30,15 @@ if length(nums)<50
     end
 end
 % 抽查结果写到文件
-fid = fopen('resultxx.txt','w');
+fid = fopen('result11.txt','w');
 for i=1:50
     num_str= num2str(nums(i));
     fprintf(fid,'%s\n',num_str);
 end
 fclose(fid);
 % 
-fid = fopen('Numxx.txt','w');
+fid = fopen('Num11.txt','w');
+nums = nums(1:50);
 for i = 1:length(data_rec)
     
     if find(nums==data_rec(i,num_col))
