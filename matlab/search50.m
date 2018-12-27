@@ -3,7 +3,7 @@ clear all;
 close all;
 % data 操作随机学号
 % data _rec记录原始结果最后跟新次数
-data = load('Num10.txt')
+data = load('Num11.txt')
 data_rec = data;
 num_col = 1; %表示学号对应的列 
 time_col = 2; %表示次数对应的列
@@ -30,7 +30,7 @@ if length(nums)<50
     end
 end
 % 抽查结果写到文件
-fid = fopen('result11.txt','w');
+fid = fopen('result12.txt','w');
 for i=1:50
     num_str= num2str(nums(i));
     fprintf(fid,'%s\n',num_str);
